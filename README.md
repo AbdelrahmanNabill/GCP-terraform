@@ -12,7 +12,7 @@
   - the management-subnet where the private vm and nat will be placed in.
   - the retstricted-subnet where the gke cluster node will be in and secondary_ip_range for pods and services.
 - in nat-gateway.tf i created the router and nat in us-central1 region and in management-subnet.
-- in service account.tf i created a custom service account to use in the private vm and worker nodes.
+- in service account.tf i created a custom service account to use in the private vm and worker nodes, with roles to pull images from GCR.
 - in vm.tf i created the private vm in management-subnet to access the cluster master-node.
 - in firewall.tf i created a rule to allow ssh to open port 22 to ssh in the private vm with iap.
 - in gke.tf i created gke cluster ( multi-zonal cluster ) in us-central1-a and us-central1-b.
